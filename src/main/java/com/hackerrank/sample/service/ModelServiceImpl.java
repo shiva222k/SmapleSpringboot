@@ -48,7 +48,6 @@ public class ModelServiceImpl implements ModelService {
             	String name = (String) employee.get("name");
                 int age=(int) employee.get("age");
                 Date dob=(Date) employee.get("dob");
-                empList.add(new Employee(name,age,dob));
             }
             
         }catch (FileNotFoundException e) {
