@@ -122,7 +122,7 @@ public class HttpJsonDynamicUnitTest {
         try {
             httpJsonFiles = Files.list(Paths.get("src/test/resources/testcases"))
                     .filter(Files::isRegularFile)
-                    .map(f -> f.getFileName().toString())
+                    .map(f -> f.getFileName().toString())  
                     .filter(f -> f.endsWith(".json"))
                     .collect(toList());
         } catch (IOException ex) {
