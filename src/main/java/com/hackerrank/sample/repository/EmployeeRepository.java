@@ -27,8 +27,8 @@ public class EmployeeRepository {
 	}
 
 	public Employee save(Employee emp) {
-		Employee employee = em.find(Employee.class,emp.getId());
-		if (employee==null) {
+		Employee employee = em.find(Employee.class, emp.getId());
+		if (employee == null) {
 			em.persist(emp);
 			return emp;
 		} else {
@@ -46,7 +46,7 @@ public class EmployeeRepository {
 	}
 
 	public List<Employee> findall() {
-		return em.createNativeQuery("select * from EMPLOYEE ",Employee.class).getResultList();
+		return em.createNativeQuery("select * from EMPLOYEE ", Employee.class).getResultList();
 	}
 
 }

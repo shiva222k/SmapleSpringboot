@@ -4,7 +4,6 @@ import java.net.URI;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,7 +21,7 @@ public class EmployeeServiceImpl {
 
 	@Autowired
 	EmployeeRepository empRepo;
-	
+
 	@DeleteMapping("/erase")
 	public void deleteAllModels() {
 		empRepo.deleteall();
@@ -32,11 +31,12 @@ public class EmployeeServiceImpl {
 	public void deleteModelById(@PathVariable Long id) {
 		empRepo.deleteById(id);
 	}
-	
+
 	@PostMapping("/model")
 	public ResponseEntity<Object> createModel(@RequestBody Employee emp) {
-		Employee savedemp= empRepo.save(emp);
-		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("{id}").buildAndExpand(savedemp.getId()).toUri();
+		Employee savedemp = empRepo.save(emp);
+		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("{id}").buildAndExpand(savedemp.getId())
+				.toUri();
 		return ResponseEntity.created(location).build();
 	}
 

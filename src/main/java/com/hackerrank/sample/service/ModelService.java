@@ -1,15 +1,17 @@
 package com.hackerrank.sample.service;
 
-import com.hackerrank.sample.model.Model;
 import java.util.List;
 
+import com.hackerrank.sample.model.Model;
+
 public interface ModelService {
-    void deleteAllModels();
-    void deleteModelById(Long id);
+	void deleteAllModels();
 
-    void createModel(Model model);
+	void deleteModelById(Long id);
 
-    Model getModelById(Long id);
+	void createModel(Model model);
 
-    List<Model> getAllModels();
+	Model getModelById(Long id);
+
+	List<Model> getAllModels();
 }
