@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.hackerrank.sample.HttpJsonDynamicUnitTest" time="0.441000" tests="2" errors="0" skipped="0" failures="0">
-    <testcase name="Get all models" classname="com.hackerrank.sample.HttpJsonDynamicUnitTest" time="0.404000"/>
-    <testcase name="Delete model by id" classname="com.hackerrank.sample.HttpJsonDynamicUnitTest" time="0.037000"/>
+<testsuite name="com.hackerrank.sample.HttpJsonDynamicUnitTest" time="1.172000" tests="2" errors="0" skipped="0" failures="0">
+    <testcase name="Get all models" classname="com.hackerrank.sample.HttpJsonDynamicUnitTest" time="1.066000"/>
+    <testcase name="Delete model by id" classname="com.hackerrank.sample.HttpJsonDynamicUnitTest" time="0.106000"/>
 </testsuite>
